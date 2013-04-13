@@ -7,7 +7,6 @@ package
 	import flash.display.StageScaleMode;
 	import flash.ui.Multitouch;
 	import flash.ui.MultitouchInputMode;
-	import starling
 	
 
 	public class Main extends Sprite 
