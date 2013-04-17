@@ -1,33 +1,29 @@
-package 
+package
 {
-	import flash.desktop.NativeApplication;
-	import flash.events.Event;
 	import flash.display.Sprite;
-	import flash.display.StageAlign;
-	import flash.display.StageScaleMode;
-	import flash.ui.Multitouch;
-	import flash.ui.MultitouchInputMode;
-	
-
-	public class Main extends Sprite 
+ 
+	import starling.core.Starling;
+	import starling.display.Image;
+	import starling.textures.Texture;
+ 
+	public class Main extends Sprite
 	{
-		
-		public function Main():void 
+		private var mStarling:Starling;
+ 
+		public function Main()
 		{
-			stage.scaleMode = StageScaleMode.NO_SCALE;
-			stage.align = StageAlign.TOP_LEFT;
-			stage.addEventListener(Event.DEACTIVATE, deactivate);
-			
-
-			Multitouch.inputMode = MultitouchInputMode.TOUCH_POINT;
-			
+ 
+			// create our Starling instance
+			mStarling = new Starling(Game, stage);
+ 
+			// set anti-aliasing (higher the better quality but slower performance)
+			mStarling.antiAliasing = 1;
+ 
+			// start it!
+			mStarling.start();
+ 
 		}
-		
-		private function deactivate(e:Event):void 
-		{
-			NativeApplication.nativeApplication.exit();
-		}
-		
 	}
-	
 }
+
+ 

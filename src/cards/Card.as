@@ -1,17 +1,12 @@
 package cards 
 {
-	/**
-	 * ...
-	 * @author Andrew Furst
-	 */
-	public class Card
+	import starling.display.Sprite;
+	
+	public class Card extends Sprite
 	{
-		
 		public function Card() 
 		{
-			trace("I'm a card");
+			
 		}
-		
 	}
-
 }
